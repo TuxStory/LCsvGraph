@@ -20,9 +20,9 @@ def Graphique(chiffre,counts):
     bar = plt.bar(range(len(chiffre)), counts, align='center', alpha=0.5,color='g')
     plt.xticks(range(len(counts)),chiffre)
     plt.title("Lotto Stats by Number")
-    plt.grid()    
+    plt.grid()
 
-def Graphique2(x,y):  
+def Graphique2(x,y):
     plt.subplot(212)
     plt.title("Lotto Stats by Counts")
     bar = plt.bar(range(len(x)), y, align='center', alpha=0.5)
@@ -37,9 +37,7 @@ def Statistique(Tirage,Tab):
     print("Rang 1 : 1/8.145.060")
     for i in range(len(Tab)):
        print("Chiffre:",Tab[i][0]," - Nombre de Tirage",Tab[i][1], Tab[i][1]/Tirage*100,"%")
-    
-    
-    
+
 def main():
     Stat = DataList()
     #print(Stat)
@@ -55,7 +53,7 @@ def main():
     Graphique(chiffre,counts)
     Graphique2(x,y)
     plt.show()
-    
+
 if __name__=="__main__":
     main()
 
